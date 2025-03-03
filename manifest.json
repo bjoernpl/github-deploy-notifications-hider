@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Deployment Notifications Hider",
+  "version": "1.0",
+  "description": "Hides GitHub deployment notifications in pull requests",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["storage"]
+}
